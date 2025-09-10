@@ -1,124 +1,110 @@
-Course Tool
+📚 Course Selection Tool
 
-This project is a Course Selection Tool built with Python Tkinter.
-It allows students (or users) to:
+A Python Tkinter application that helps students (or users) select courses in a simple GUI.
 
-Load available courses from a CSV file.
+✔ Load courses from a CSV file
+✔ Filter by Year and Department
+✔ Select up to 6 courses with automatic conflict detection
+✔ Save selected courses into SavedCourses.csv
 
-Filter courses by Year and Department.
+🚀 Features
 
-Select up to 6 courses while preventing time conflicts.
+🔎 Load & Filter Courses
 
-Save selected courses into a new CSV file.
+Import a .csv file with course data
 
-The tool provides a simple graphical user interface (GUI) for better usability.
+Filter by Year (1–5) and Department
 
-Features
+📋 Interactive Course Lists
 
-Load courses from CSV
-Enter the path of a .csv file containing course data.
+Available courses shown in one listbox
 
-Filter by Year and Department
+Double-click to add a course
 
-Choose study year (1–5).
+Selected courses appear in a separate list
 
-Enter department code (e.g., "CS").
+⚠ Smart Validation
 
-Course Display
-Filtered courses are displayed in a listbox.
+Prevents duplicate course selections
 
-Double-click a course to select it.
+Detects schedule conflicts (courses at the same time)
 
-The tool prevents duplicate selections.
+Maximum of 6 courses allowed
 
-A warning is shown if two courses overlap in time.
+💾 Save Results
 
-You may select up to six courses only.
+Selected courses can be saved as SavedCourses.csv
 
-Buttons
+🛠 Requirements
 
-Display → Loads and filters courses.
+Python 3.7+
 
-Clear → Clears all selected courses.
+Tkinter (comes with Python, no extra install needed)
 
-Save → Saves selected courses into SavedCourses.csv.
-
-Selected Courses View
-
-Shows all courses chosen by the user.
-
-Requirements
-
-Python 3.x
-
-Tkinter (comes pre-installed with Python)
-
-No external libraries are needed.
-
-File Structure
+📂 Project Structure
 CourseTool/
 │
-├── main.py           # Main program
-├── SavedCourses.csv  # Created after saving selections
-└── README.md         # Documentation
+├── main.py            # Main program (GUI)
+├── README.md          # Documentation
+└── SavedCourses.csv   # Created after saving (generated file)
 
-How to Run
+▶ How to Run
 
 Clone or download the repository.
 
-Make sure your system has Python 3.x installed.
-
 Open a terminal in the project folder.
 
-Run the program:
+Run:
 
 python main.py
 
-Usage
+📝 Usage Guide
 
-Enter the file path of your course CSV file in the entry box.
-Example:
+Provide CSV Path → Enter the file path to your .csv course file.
 
-C:/Users/Name/Documents/courses.csv
+Select Filters → Choose Year and type Department code (e.g., CS).
 
+Click Display → Shows all matching courses.
 
-Select the Year from the dropdown.
+Double-Click a Course → Adds it to your selection.
 
-Enter the Department code (e.g., CS).
+Review Selected Courses in the left listbox.
 
-Click Display to load matching courses.
+Save → Export selections to SavedCourses.csv.
 
-Double-click a course in the list to select it.
+📑 Example CSV Format
 
-Review your chosen courses in the Selected Courses list.
-
-Save selections by clicking Save.
-
-Example CSV File Format
-
-The CSV should contain course details in rows.
-A sample line might look like:
+The .csv file should contain course details per row, like:
 
 CS101 1, Introduction to Programming, Mon 10-12
 MA202 2, Linear Algebra, Tue 14-16
+PHY301 3, Physics III, Wed 09-11
 
 
-First field: Department + Course ID (e.g., CS101).
+First field: Course ID (Department + Number)
 
-Second field: Year (e.g., 1, 2, 3).
+Second field: Year of study
 
-Remaining fields: Course details (name, schedule, etc.).
+Remaining fields: Course details (title, schedule, etc.)
 
-Output
+📊 Example Workflow
 
-Selected courses are saved to SavedCourses.csv.
+Enter: C:/Users/John/Documents/courses.csv
 
-Each course is written as a row.
+Select Year = 2, Department = CS
 
-Notes
+Click Display → Courses for 2nd-year CS appear
 
-You can only select up to six courses.
+Double-click CS202 → It appears in Selected Courses
 
-If two courses have overlapping schedules, the tool will warn you.
+Save → File SavedCourses.csv is created with your selection
 
-Make sure your CSV file is well-formatted before using.
+📌 Notes
+
+✅ Maximum 6 courses allowed
+
+✅ Time conflicts between courses are automatically detected
+
+⚠ Make sure your input .csv file is properly formatted
+
+✨ With this tool, students can easily plan their schedules without worrying about overlaps or mistakes!
