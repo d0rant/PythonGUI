@@ -11,7 +11,6 @@ idlist= []
 timelist= []
 courselist= []
 
-
 class Courses(object):
 
 
